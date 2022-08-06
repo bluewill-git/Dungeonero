@@ -1105,7 +1105,9 @@ function importer(file){
 		// this will then display a text file
 		dungeonFilled = JSON.parse(reader.result.split('----------')[0]);
 		dungeonObject = JSON.parse(reader.result.split('----------')[1]);
-		fullKeys = JSON.parse(reader.result.split('----------')[2]);
+		if(reader.result.split('----------').length > 2){ // Esto da compatibilidad con mapas viejos que no tienen las keys guardadas.
+			fullKeys = JSON.parse(reader.result.split('----------')[2]);
+		}
 		cargarDungeon();
 	}, false);
 
