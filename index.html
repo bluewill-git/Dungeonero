@@ -69,7 +69,7 @@
 
 <div style="position:relative; margin:20px 0 0 20px; border:3px solid black; max-width:calc(100vw - 250px); max-height:calc(100vh - 50px); overflow:scroll">
 
-<canvas id="dungeonC" width="1439px" height="1439px" style="">
+<canvas id="dungeonC" width="1439px" height="1439px">
 
 </canvas>
 
@@ -1098,6 +1098,7 @@ function importerButton(){
 }
 
 function importer(file){
+
 	const reader = new FileReader();
 
 	reader.addEventListener("load", () => {
@@ -1251,8 +1252,6 @@ function KeyPress(e) {
 
 document.onkeydown = KeyPress;
 
-
-
 						//TODO: Hacer que Undo no bugee al arrastrar
 						//TODO: Herramienta de borrado de objetos
 						//TODO: Herramienta de borrado de 3x3
@@ -1265,12 +1264,13 @@ document.onkeydown = KeyPress;
 						//TODO: El small eraser no borra muros
 						//TODO: El importador no importa las keys y deberia
 						//TODO: Key -100 es creada
-						//TODO: Puertas en cerrado no se alinean
+						//TODO: Puertas en cerrado no se
+//TODO: con multiples casillas y scroll el bocadillo de keys se abre mal colocado
 //TODO: Agregar escaleras de caracol
-//TODO: Publicar en git con versionado
+						//TODO: Publicar en git con versionado
 						//TODO: Herramienta para redactar las keys
 //TODO: Copiar y pegar y decidir trabajo multiplanta
-//TODO: Aplicar nuevas funciones de casillas a cargar dungeon
+						//TODO: Aplicar nuevas funciones de casillas a cargar dungeon
 //TODO: Default color styles
 						//TODO: Tokens?
 //TODO: Gestion de archivos (plantas?)
@@ -1279,24 +1279,30 @@ document.onkeydown = KeyPress;
 //TODO: Organizar codigo en js y css
 //TODO: Comentar bien
 //TODO: Refactorizar a un idioma
-//TODO: Acelerar el carar dungeon al menos en cambos de ToggleGridLines
+						//TODO: Acelerar el cargar dungeon al menos en cambos de ToggleGridLines
 //TODO: Meter indicativos de carga
 //TODO: Agregar herramienta de borde en caida (elimina el borde creado y mete uno de 1px)
 //TODO: Agregar funcion para que las escaleras de varias casillas se distribuyan solas
 //TODO: Agregar escaleras simples y borde estrecho para cambios leves de nivel
 						//TODO: Requerir wd files en importacion
 						//TODO: Agregar keys al importador
-//TODO: Cambiar tamaño del canvas
+//TODO: Cambiar tamaño del canvas en vivo
+//TODO: El downloader deberia incluir las keys
+
+
 
 //FASE 2
+//TODO: Herramienta para tirar dados
+//TODO: Combinar canvas
+
+
+
+//FASE 3
 //TODO: Conseguir mezcla de estilos en el mismo mapa, posiblemente estilo por casilla
 //TODO: MEjorar interfaz en general
 //TODO: Conseguir ruido para los muros y casillas
 //TODO: Conseguir ruido extra para muros naturales
 
-//FASE 3
-//TODO: Herramienta para tirar dados
-//TODO: Combinar canvas
 
 drawBoard();
 </script>
